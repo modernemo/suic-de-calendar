@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suic*de Calendar</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <h1>Select A Good Day to Die🥰</h1>
+
+    <div class="calendar">
+        <input type="date" id="selectdate">
+    </div>
+
+    <div class="btn">
+        <button id="go">Get Started</button>
+    </div>
+
+<script>
+    document.getElementById("go").addEventListener("click", function () {
+      const date = document.getElementById("selectdate").value;
+      if (date) {
+        // Redirect to the countdown page with the date as a query parameter
+        window.location.href = `daysleft.html?date=${date}`;
+      } else {
+        alert("Please select a date!");
+      }
+    });
+</script>
+
+</body>
+
+</html>

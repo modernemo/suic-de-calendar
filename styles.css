@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #121212;
+}
+
+body h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 4rem;
+    color: palevioletred;
+    text-align: center;
+    margin-top: 8%;
+}
+
+.calendar{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 4%;
+}
+
+body input[type=date]{
+    display: block;
+    background-color: #121212;
+    color: pink;
+    border: 2px solid pink;
+    padding: 3%;
+    border-radius: 15px;
+    outline: none;
+    cursor: pointer;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: pink; /* Set background color for the calendar button */
+    border-radius: 3px; /* Optional: rounded corners */
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+button{
+    background-color: #121212;
+    color: pink;
+    border: 3px solid pink;
+    border-radius: 15px;
+    outline: none;
+    padding: 2% 4%;
+    cursor: pointer;
+    transition: background-color 2s ease;
+    transition: color 2s ease;
+}
+
+button:hover{
+    background-color: black;
+    color: white;
+}
+
+.ctn-container{
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+}
+
+.ctn{
+    font-size: 2rem;
+    color: palevioletred;
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    body h1 {
+        font-size: 3rem; /* Adjust font size for smaller screens */
+    }
+
+    body input[type="date"] {
+        padding: 0.8rem; /* Adjust padding */
+    }
+
+    button {
+        padding: 0.8rem 1.6rem; /* Adjust button padding */
+        font-size: 1.2rem; /* Adjust button font size */
+    }
+
+    .ctn {
+        font-size: 1.5rem; /* Adjust countdown text size */
+    }
+}
+
+@media (max-width: 480px) {
+    body h1 {
+        font-size: 2.5rem; /* Further adjust font size for mobile */
+    }
+
+    body input[type="date"] {
+        width: 80%; /* Make the input width responsive */
+    }
+
+    button {
+        padding: 0.6rem 1.2rem; /* Further adjust button padding */
+        font-size: 1rem; /* Adjust button font size */
+    }
+
+    .ctn {
+        font-size: 1.2rem; /* Further adjust countdown text size */
+    }
+}
